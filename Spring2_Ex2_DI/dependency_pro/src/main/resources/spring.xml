@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+          http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean class="com.spring.FlippedClassRoom" id="fc1">
+    <property name="duration" value="1"></property>
+    <property name="clsroom">
+        <list>
+            <ref bean="c1"></ref>
+
+            <ref bean="c2"></ref>
+
+            <ref bean="c3"></ref>
+
+        </list>
+    </property>
+</bean>
+
+
+
+
+
+</beans>

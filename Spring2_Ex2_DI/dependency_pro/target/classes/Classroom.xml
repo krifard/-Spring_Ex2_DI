@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   <context:annotation-config></context:annotation-config>
+    <bean class="com.spring.ClassRoom" id="c1">
+        <property name="student">
+            <list>
+                <ref bean ="s1"></ref>
+                <ref bean ="s2"></ref>
+                <ref bean ="s3"></ref>
+
+            </list>
+        </property>
+        <property name="location">
+            <list>
+                <ref bean ="l1"></ref>
+                <ref bean ="l2"></ref>
+                <ref bean ="l3"></ref>
+            </list>
+        </property>
+        <property name="mentor" ref="m1"></property>
+    </bean>
+    <bean class="com.spring.ClassRoom" id="c2">
+        <property name="student">
+            <list>
+                <ref bean ="s2"></ref>
+            </list>
+        </property>
+        <property name="location">
+            <list>
+                <ref bean ="l2"></ref>
+            </list>
+        </property>
+        <property name="mentor" ref="m2"></property>
+    </bean>
+    <bean class="com.spring.ClassRoom" id="c3">
+        <property name="student">
+            <list>
+                <ref bean ="s3"></ref>
+            </list>
+        </property>
+        <property name="location">
+            <list>
+                <ref bean ="l3"></ref>
+            </list>
+        </property>
+        <property name="mentor" ref="m3"></property>
+    </bean>
+
+
+
+
+</beans>
