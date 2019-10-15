@@ -14,15 +14,17 @@ public class App
              String files[] = new String[]{"spring.xml","Location.xml","Student.xml","Mentor.xml","Classroom.xml","ListOfStudents.xml"} ;
 
             ApplicationContext context = new ClassPathXmlApplicationContext(files);
-            ClassRoom class1 = (ClassRoom) context.getBean("c1");
+//            ClassRoom class1 = (ClassRoom) context.getBean("c1");
 //            ClassRoom class2 = (ClassRoom) context.getBean("c2");
 //            ClassRoom class3 = (ClassRoom) context.getBean("c3");
-//            FlippedClassRoom fc1 = (FlippedClassRoom) context.getBean("fc1");
-//            fc1.GetClassRoomInfo();
-            class1.ShowMentorInfo();
+            FlippedClassRoom fc1 = (FlippedClassRoom) context.getBean("fc1");
+            fc1.ShowLocationInfo();
+            fc1.ShowMentorInfo();
+            fc1.ShowStudentInfo();
+//            class1.ShowMentorInfo();
 
 
-            class1.ShowStudentInfo();
+//            class1.ShowStudentInfo();
 //            class1.ShowLocationInfo();
 //            class1.ObjectMatcher();
 //            System.out.println("XXXXXXXXXXXXX");

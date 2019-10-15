@@ -4,12 +4,21 @@
        xsi:schemaLocation="
           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class=" com.spring.StudentsList" id="los1">
+    <bean class=" com.spring.Lists" id="los1">
         <property name="ListOfStudents">
             <list>
                 <ref bean="s1"></ref>
                 <ref bean="s2"></ref>
                 <ref bean="s3"></ref>
+            </list>
+        </property>
+    </bean>
+    <bean class=" com.spring.Lists" id="lol1">
+        <property name="ListOfLocations">
+            <list>
+                <ref bean="l1"></ref>
+                <ref bean="l2"></ref>
+                <ref bean="l3"></ref>
             </list>
         </property>
     </bean>

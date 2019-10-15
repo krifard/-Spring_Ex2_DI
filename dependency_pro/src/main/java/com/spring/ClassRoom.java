@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import java.util.*;
 
 public class ClassRoom {
+
     public Mentor getMentor() {
         return mentor;
     }
@@ -14,24 +15,32 @@ public class ClassRoom {
     public void setMentor(Mentor mentor) {
         this.mentor = mentor;
     }
-
     public Mentor mentor;
-    public List<Location> getLocation() {
+
+
+
+    public Lists getLocation() {
         return location;
     }
-
-    public void setLocation(List<Location> location) {
+    @Autowired
+    @Qualifier("lol1")
+    public void setLocation(Lists location) {
         this.location = location;
     }
 
-    public List<Location> location;
+    public Lists location;
+
     @Autowired
     @Qualifier("los1")
-    public void setStudent(StudentsList student) {
+    public void setStudent(Lists student) {
         this.student = student;
     }
 
-    private StudentsList student;
+    public Lists getStudent() {
+        return student;
+    }
+
+    private Lists student;
 
 
 
@@ -58,7 +67,7 @@ public class ClassRoom {
     }
     public void ShowLocationInfo()
     {
-        for (Location loc:location)
+        for (Location loc:location.ListOfLocations)
         {
             System.out.println("Area: " + loc.getArea());
             System.out.println("City: " + loc.getCity());
